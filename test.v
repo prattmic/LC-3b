@@ -25,13 +25,46 @@ module alu_test;
     ALU test_passa(A, B, test_xor.PASSA, OUT_PASSA);
 
     initial begin
-        $dumpfile("alu_test.vcd");
-        $dumpvars;
-
         `ALU_TEST(1, 1, 2, 1, 0, 1)
         `ALU_TEST(2, 1, 3, 0, 3, 2)
         `ALU_TEST(16'h1000, 16'h0001, 16'h1001, 0, 16'h1001, 16'h1000)
+    end
+endmodule
 
-        $finish;
+module reg_file_test;
+    reg [15:0]data;
+    reg LD_REG;
+    reg [2:0]DR;
+    reg [2:0]SR1;
+    reg [2:0]SR2;
+    wire [15:0]SR1_OUT;
+    wire [15:0]SR2_OUT;
+
+    LC3 cpu();
+    REG_FILE test_reg_file(cpu.clk, data, LD_REG, DR, SR1, SR2, SR1_OUT, SR2_OUT);
+
+    initial begin
+        // Wait for registers to zero
+        #5
+
+        // Test setting and reading register
+        data = 16'h69;
+        DR = 3;
+        LD_REG = 1;
+        #2 LD_REG = 0;
+
+        SR1 = 3;
+        #2 if (SR1_OUT != 16'h69) begin
+            $display("SR1_OUT = 0x%h, expected 0x%h", SR1_OUT, 16'h69);
+        end
+    end
+endmodule
+
+module test;
+    initial begin
+        $dumpfile("test.vcd");
+        $dumpvars;
+
+        #1000 $finish;
     end
 endmodule
