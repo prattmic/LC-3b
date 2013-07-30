@@ -8,7 +8,7 @@ VFLAGS += -g 2005
 
 all: $(BIN)
 
-$(BIN):
+$(BIN): $(SRCS)
 	iverilog $(VFLAGS) -o $@ $(SRCS)
 
 simulate: $(BIN)
