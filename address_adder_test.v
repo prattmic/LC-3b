@@ -7,8 +7,7 @@ module address_adder_test;
     reg [15:0]SR1;
     wire [15:0]OUT;
 
-    LC3 cpu();
-    ADDRESS_ADDER test_address_adder(cpu.clk, ADDR1_SEL, ADDR2_SEL, LSHFT, IR, PC, SR1, OUT);
+    ADDRESS_ADDER test_address_adder(ADDR1_SEL, ADDR2_SEL, LSHFT, IR, PC, SR1, OUT);
 
     initial begin
         // Check PC + 0

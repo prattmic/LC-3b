@@ -5,7 +5,6 @@
 // Address adder.  Incorporates ADDR1 and ADDR2 muxes and IR sign extension
 
 module ADDRESS_ADDER(
-    input wire clk,
     input wire [1:0]ADDR1_SEL,
     input wire [2:0]ADDR2_SEL,
     input wire LSHFT,
