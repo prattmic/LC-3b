@@ -9,6 +9,7 @@ SRCS += reg_file.v
 SRCS += pc_mux.v
 SRCS += cc.v
 SRCS += mar_mux.v
+SRCS += ir.v
 
 TESTS += test.v
 TESTS += alu_test.v
