@@ -28,6 +28,7 @@ module alu_test;
         `ALU_TEST(1, 1, 2, 1, 0, 1)
         `ALU_TEST(2, 1, 3, 0, 3, 2)
         `ALU_TEST(16'h1000, 16'h0001, 16'h1001, 0, 16'h1001, 16'h1000)
+        $display("ALU test done");
     end
 endmodule
 
@@ -57,6 +58,8 @@ module reg_file_test;
         #2 if (SR1_OUT != 16'h69) begin
             $display("SR1_OUT = 0x%h, expected 0x%h", SR1_OUT, 16'h69);
         end
+
+        $display("Register file test done");
     end
 endmodule
 
