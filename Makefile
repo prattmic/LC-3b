@@ -8,12 +8,14 @@ SRCS += alu.v
 SRCS += reg_file.v
 SRCS += pc_mux.v
 SRCS += cc.v
+SRCS += mar_mux.v
 
 TESTS += test.v
 TESTS += alu_test.v
 TESTS += reg_file_test.v
 TESTS += pc_mux_test.v
 TESTS += cc_test.v
+TESTS += mar_mux_test.v
 
 VFLAGS += -g 2005
 
