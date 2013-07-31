@@ -18,7 +18,7 @@ TESTS += pc_mux_test.v
 TESTS += cc_test.v
 TESTS += mar_mux_test.v
 
-VFLAGS += -g 2005
+VFLAGS += -g 2005 -Wall
 
 all: $(BIN)
 
