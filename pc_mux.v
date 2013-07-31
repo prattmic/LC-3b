@@ -1,12 +1,13 @@
 // Implements PC mux and actual PC logic
 
-module PC_MUX(clk, LD_PC, PC_SEL, bus, adder, PC);
-    input wire clk;
-    input wire LD_PC;       // Load PC this cycle
-    input wire [1:0]PC_SEL; // PC source
-    input wire [15:0]bus;   // PC input from data bus
-    input wire [15:0]adder; // PC input from address adder
-    output reg [15:0]PC;
+module PC_MUX(
+    input wire clk,
+    input wire LD_PC,       // Load PC this cycle
+    input wire [1:0]PC_SEL, // PC source
+    input wire [15:0]bus,   // PC input from data bus
+    input wire [15:0]adder, // PC input from address adder
+    output reg [15:0]PC
+);
 
     // PC sources
     parameter INC = 2'd0;   // PC = PC + 2

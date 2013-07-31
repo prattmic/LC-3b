@@ -1,8 +1,9 @@
-module ALU(A, B, ALUK, OUT);
-    input wire [15:0]A;
-    input wire [15:0]B;
-    input wire [1:0]ALUK;
-    output reg [15:0]OUT;
+module ALU(
+    input wire [15:0]A,
+    input wire [15:0]B,
+    input wire [1:0]ALUK,
+    output reg [15:0]OUT
+);
 
     parameter ADD = 2'd0;
     parameter AND = 2'd1;

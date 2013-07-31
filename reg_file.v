@@ -1,12 +1,13 @@
-module REG_FILE(clk, data, LD_REG, DR, SR1, SR2, SR1_OUT, SR2_OUT);
-    input wire clk;
-    input wire [15:0]data;
-    input wire LD_REG;
-    input wire [2:0]DR;
-    input wire [2:0]SR1;
-    input wire [2:0]SR2;
-    output reg [15:0]SR1_OUT;
-    output reg [15:0]SR2_OUT;
+module REG_FILE(
+    input wire clk,
+    input wire [15:0]data,
+    input wire LD_REG,
+    input wire [2:0]DR,
+    input wire [2:0]SR1,
+    input wire [2:0]SR2,
+    output reg [15:0]SR1_OUT,
+    output reg [15:0]SR2_OUT
+);
 
     reg [15:0]R[0:7];
 
