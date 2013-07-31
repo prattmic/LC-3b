@@ -1,1 +1,8 @@
 LC-3b implemented in Verilog
+
+Most of the structures implemented as described in Appendix C of
+"Introduction to Computing Systems: From Bits and Gates to C and Beyond"
+by Yale Patt and Sanjay Patel.
+
+The appendix can be found at:
+http://users.ece.utexas.edu/~patt/07s.360N/handouts/360n.appC.pdf
