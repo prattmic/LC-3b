@@ -1,6 +1,4 @@
-// 16-bit sign extend
-// Extend __bit of __val to form a 16-bit result
-`define SEXT(__val, __bit)  { {(16-__bit){__val[__bit]}}, __val }
+`include "sign.vh"
 
 // Address adder.  Incorporates ADDR1 and ADDR2 muxes and IR sign extension
 
