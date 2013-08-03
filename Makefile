@@ -12,6 +12,7 @@ SRCS += mar_mux.v
 SRCS += ir.v
 SRCS += address_adder.v
 SRCS += shifter.v
+SRCS += mdr.v
 
 TESTS += test.v
 TESTS += alu_test.v
@@ -21,6 +22,7 @@ TESTS += cc_test.v
 TESTS += mar_mux_test.v
 TESTS += address_adder_test.v
 TESTS += shifter_test.v
+TESTS += mdr_test.v
 
 VFLAGS += -g 2005 -Wall
 
