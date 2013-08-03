@@ -37,3 +37,6 @@ simulate: $(BIN)
 
 test: $(BIN_TEST)
 	$(BIN_TEST)
+
+clean:
+	-rm $(BIN) $(BIN_TEST)
